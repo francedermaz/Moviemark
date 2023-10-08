@@ -13,14 +13,10 @@ export function getMovies() {
 
 export function getGenres() {
   return async function (dispatch) {
-    // let json = await axios.get("http://localhost:3001/api/genres");
-    // return dispatch({
-    //   type: "GET_GENRES",
-    //   payload: json.data,
-    // });
+    let json = await axios.get("http://localhost:3001/api/genres");
     return dispatch({
       type: "GET_GENRES",
-      payload: [],
+      payload: json.data,
     });
   };
 }
@@ -78,14 +74,10 @@ export function filterMovieByGenre(payload) {
 
 export function getUpcoming() {
   return async function (dispatch) {
-    // let json = await axios.get("http://localhost:3001/api/upcoming");
-    // return dispatch({
-    //   type: "GET_UPCOMING",
-    //   payload: json.data,
-    // });
+    let json = await axios.get("http://localhost:3001/api/upcoming");
     return dispatch({
       type: "GET_UPCOMING",
-      payload: [],
+      payload: json.data,
     });
   };
 }
@@ -102,14 +94,10 @@ export function getUpcomingForId(payload) {
 
 export function getTopRated() {
   return async function (dispatch) {
-    // let json = await axios.get("http://localhost:3001/api/top_rated");
-    // return dispatch({
-    //   type: "GET_TOP_RATED",
-    //   payload: json.data,
-    // });
+    let json = await axios.get("http://localhost:3001/api/top_rated");
     return dispatch({
       type: "GET_TOP_RATED",
-      payload: [],
+      payload: json.data,
     });
   };
 }
