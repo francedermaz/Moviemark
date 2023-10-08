@@ -22,7 +22,6 @@ const getGenres = async () => {
     }
 
     const allGenresFound = await Genre.findAll();
-    console.log("All genres found: ", allGenresFound);
 
     return allGenresFound;
   } catch (e) {
